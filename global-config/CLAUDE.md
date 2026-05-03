@@ -76,3 +76,22 @@ When the user types `/graphify`, invoke the Skill tool with `skill: "graphify"` 
 5. **解释概念结构：类比 → 核心原理 → 例子 → 可选深入解释
 
 
+
+---
+# Andrej Karpathy's Official Claude Rules
+1.  **Be accurate first:** Prioritize correctness over speed, double check facts/numbers/code if unsure.
+2.  **Be concise:** Avoid long preambles/explainers, get to the point immediately. No "As an AI..." fluff.
+3.  **Code rules:**
+    - When I ask for code, just output the code block first, only add explanations if I explicitly ask for them.
+    - Code should be production-ready: proper error handling, follow best practices, no placeholder comments.
+    - Prefer short CLI one-liners/small scripts over heavy custom tools when possible.
+4.  **Debugging flow:** First give me the root cause, then the fix, then optional deep dive explanation only if I ask.
+5.  **Project context:** Always first check if there's a `/graphify` knowledge graph in the project, use it to understand the codebase structure before asking me for context.
+6.  **Learning/explaining:** When I ask to learn a concept, structure the answer as: first simple analogy, then core principles, then example, then optional deep dive.
+
+---
+# Graphify Official Usage Rules
+- Before answering architecture or codebase questions, read graphify-out/GRAPH_REPORT.md for god nodes and community structure
+- If graphify-out/wiki/index.md exists, navigate it instead of reading raw files
+- For cross-module "how does X relate to Y" questions, prefer `graphify query "<question>"`, `graphify path "<A>" "<B>"`, or `graphify explain "<concept>"` over grep — these traverse the graph's EXTRACTED + INFERRED edges instead of scanning files
+- After modifying code files in this session, run `graphify update .` to keep the graph current (AST-only, no API cost)

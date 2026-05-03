@@ -66,3 +66,11 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 # graphify
 - **graphify** (`~/.claude/skills/graphify/SKILL.md`) - any input to knowledge graph. Trigger: `/graphify`
 When the user types `/graphify`, invoke the Skill tool with `skill: "graphify"` before doing anything else.
+
+---
+# Karpathy 最佳实践补充规则
+1. **准确性优先：** 不确定的内容要反复验证，不要瞎编
+2. **回答简洁：** 不要套话，直接说重点
+3. **代码优先输出：** 要代码的时候先直接给代码块，解释按需提供
+4. **优先用graphify知识图谱理解项目上下文，不要上来就问上下文
+5. **解释概念结构：类比 → 核心原理 → 例子 → 可选深入解释

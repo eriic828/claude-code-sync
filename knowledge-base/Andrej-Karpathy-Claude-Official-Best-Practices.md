@@ -38,7 +38,7 @@ Use this prompt when you want fixed code directly, no verbose explanations:
 Fix this bug, output ONLY the full corrected code block, no explanations, no comments.
 ```
 ### 2. Cut 70% tokens for large projects
-After running  to build knowledge graph, add this sentence to all your questions, Claude will only use the graph instead of scanning all raw files:
+After running `/graphify .` to build knowledge graph, add this sentence to all your questions, Claude will only use the graph instead of scanning all raw files:
 ```
 Use ONLY the graphify knowledge graph in this project to answer, do not read raw files.
 ```
@@ -74,7 +74,7 @@ Use this prompt when you want fixed code directly, no verbose explanations:
 Fix this bug, output ONLY the full corrected code block, no explanations, no comments.
 ```
 ### 2. Cut 70% tokens for large projects
-After running  to build knowledge graph, add this sentence to all your questions, Claude will only use the graph instead of scanning all raw files:
+After running `/graphify .` to build knowledge graph, add this sentence to all your questions, Claude will only use the graph instead of scanning all raw files:
 ```
 Use ONLY the graphify knowledge graph in this project to answer, do not read raw files.
 ```

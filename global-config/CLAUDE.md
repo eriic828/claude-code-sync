@@ -1,3 +1,7 @@
+# 📌 This configuration is from eric828/claude-code-sync repository
+# Follow the full best practice guide in knowledge-base/Claude-Code-All-In-One-Best-Practices-Guide.md
+# Recommended to install plugins: Superpowers, Graphify
+
 # CLAUDE.md
 
 Behavioral guidelines to reduce common LLM coding mistakes. Merge with project-specific instructions as needed.

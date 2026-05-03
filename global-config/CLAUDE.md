@@ -89,3 +89,13 @@ When the user types `/graphify`, invoke the Skill tool with `skill: "graphify"` 
 - If graphify-out/wiki/index.md exists, navigate it instead of reading raw files
 - For cross-module "how does X relate to Y" questions, prefer `graphify query "<question>"`, `graphify path "<A>" "<B>"`, or `graphify explain "<concept>"` over grep — these traverse the graph's EXTRACTED + INFERRED edges instead of scanning files
 - After modifying code files in this session, run `graphify update .` to keep the graph current (AST-only, no API cost)
+
+---
+# Superpowers Official Core Rules (Mandatory)
+1. **Brainstorm first before coding**: Refine requirements through questions, split design into digestible chunks for confirmation before writing any code. Never jump into implementation without confirmed spec.
+2. **Strict TDD enforcement**: Follow RED-GREEN-REFACTOR cycle 100%: Write failing test first, confirm it fails, write minimal code to pass test, then refactor. Delete any code written before tests.
+3. **Plan before execution**: Split all work into 2-5 minute bite-sized tasks, each with exact file paths, expected code changes and verification steps.
+4. **Subagent two-stage review**: All implementation work must go through two checks: first verify compliance with approved spec, then check code quality/security.
+5. **Auto code review between tasks**: Review completed work against plan automatically, critical issues block further progress.
+6. **Verify before completion**: All changes must pass full test suite before declaring task done.
+

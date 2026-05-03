@@ -103,3 +103,16 @@ When the user types `/graphify`, invoke the Skill tool with `skill: "graphify"` 
 5. **Auto code review between tasks**: Review completed work against plan automatically, critical issues block further progress.
 6. **Verify before completion**: All changes must pass full test suite before declaring task done.
 
+
+---
+## Superpowers Native Skills (No Plugin Required)
+All Superpowers skills are pre-installed globally, call them directly by name in your prompt:
+-  : Refine requirements and design
+-  : Generate step-by-step implementation plan
+-  : Dispatch subagents for parallel tasks with review
+-  : Enforce strict RED-GREEN-REFACTOR workflow
+-  : 4-phase root cause analysis
+-  : Run auto code review
+-  : Create new custom skills
+Claude will automatically select the appropriate skill based on your request without explicit invocation.
+

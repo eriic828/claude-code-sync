@@ -1,6 +1,16 @@
 #!/bin/bash
 set -e
 echo "🔄 开始同步最新Claude Code配置和技巧..."
+# 检测并自动安装GitNexus代码图谱工具
+if ! command -v gitnexus &> /dev/null; then
+    echo "📦 未检测到GitNexus，正在自动安装..."
+    npm install -g gitnexus --registry=https://registry.npmmirror.com > /dev/null 2>&1 || echo "⚠️ npm安装失败，请手动执行：npm install -g gitnexus"
+    if command -v gitnexus &> /dev/null; then
+        echo "🔧 自动配置GitNexus到所有MCP兼容编辑器..."
+        gitnexus setup --yes > /dev/null 2>&1
+        echo "✅ GitNexus安装配置完成"
+    fi
+fi
 # 0. 自动备份当前本地CLAUDE.md，万无一失
 BACKUP_DIR="$HOME/.claude/backup"
 mkdir -p "$BACKUP_DIR"

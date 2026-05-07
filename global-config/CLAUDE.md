@@ -114,5 +114,6 @@ All Superpowers skills are pre-installed globally, call them directly by name in
 -  : 4-phase root cause analysis
 -  : Run auto code review
 -  : Create new custom skills
+- **drawio**: AI驱动的draw.io/diagrams.net图表生成工具，支持流程图、架构图、UML等多类型图表，一键导出可编辑格式。触发：`/drawio`
 Claude will automatically select the appropriate skill based on your request without explicit invocation.
 

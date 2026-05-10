@@ -50,5 +50,15 @@ mkdir -p "$KB_DIR"
 cp -r "$(dirname "$0")/knowledge-base/"* "$KB_DIR/"
 echo "✅ 知识库同步完成"
 
+# 同步最新Claude Code官方最佳实践
+echo "🔄 同步最新Claude Code官方最佳实践内容..."
+BEST_PRACTICE_DIR="$KB_DIR/best-practices-official"
+mkdir -p "$BEST_PRACTICE_DIR"
+cd /tmp && rm -rf claude-code-best-practice
+git clone --depth 1 https://github.com/shanraisshan/claude-code-best-practice.git > /dev/null 2>&1
+rm -rf claude-code-best-practice/.git
+cp -rf claude-code-best-practice/* "$BEST_PRACTICE_DIR/"
+echo "✅ Claude Code官方最佳实践同步完成"
+
 echo -e "\n🎉 全部更新完成！重启Claude Code即可生效最新内容~"
 echo "💡 提示：您的私人自定义规则请写在CLAUDE.md末尾的分隔符下方，永远不会被同步覆盖哦"
